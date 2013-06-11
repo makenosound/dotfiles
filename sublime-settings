@@ -8,5 +8,13 @@
   "tab_size": 2,
   "theme": "Soda Light 3.sublime-theme",
   "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": false
+  "trim_trailing_white_space_on_save": false,
+  "folder_exclude_patterns": [
+    ".svn", ".git", ".hg", "CVS",
+    ".bundle", ".sass-cache"
+  ],
+  "file_exclude_patterns": [
+    "*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db",
+    "*.scssc", "*.sassc"
+  ]
 }
