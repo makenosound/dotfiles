@@ -11,11 +11,7 @@
   "trim_trailing_white_space_on_save": false,
   "folder_exclude_patterns": [
     ".svn", ".git", ".hg", "CVS",
-    ".bundle", ".sass-cache"
-  ],
-  "folder_exclude_patterns": [
-    ".svn", ".git", ".hg", "CVS",
-    "bin"
+    ".bundle", ".sass-cache", "bin"
   ],
   "file_exclude_patterns": [
     "*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db",
