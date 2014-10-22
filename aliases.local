@@ -1,0 +1,43 @@
+# Personal
+alias notes="subl -n '~/Dropbox (Personal)/Apps/Editorial'"
+
+# Git
+alias gs='git status'
+alias gd='git diff'
+alias gb='git branch'
+alias gr='git remote -v show'
+alias gsp='git smart-pull'
+
+# Sublime
+alias m="subl -n"
+alias mate="subl -n"
+
+# Rails
+alias ss="./script/server"
+alias be='bundle exec'
+alias dbm='bundle exec rake db:migrate'
+alias dbm0='bundle exec rake db:migrate VERSION=0'
+
+# Nodenv
+alias ne="nodenv exec"
+
+# Hosts
+alias edithosts='m /etc/hosts'
+
+# Webservers
+alias pserve='python -m SimpleHTTPServer'
+serve() { ruby -run -e httpd "$*" -p5000 }
+
+# OS X
+alias o="open"
+alias fix_dns="sudo killall -HUP mDNSResponder && dscacheutil -flushcache"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias dds="find . -name '*.DS_Store' -type f -delete"
+
+# GRC overides for ls (enable via `brew install coreutils`)
+if $(gls &>/dev/null); then
+  alias ls="gls -F --color"
+  alias l="gls -lAh --color"
+  alias ll="gls -l --color"
+  alias la='gls -A --color'
+fi

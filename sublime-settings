@@ -1,52 +1,57 @@
 {
-  "color_scheme": "Packages/User/Popcorn (SL).tmTheme",
-  "dictionary": "Packages/Language - English/en_GB.dic",
-  "draw_white_space": "selection",
-  "enable_live_count": true,
-  "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns":
-  [
-    "*.a",
-    "*.class",
-    "*.db",
-    "*.dll",
-    "*.dylib",
-    "*.exe",
-    "*.idb",
-    "*.lib",
-    "*.ncb",
-    "*.o",
-    "*.obj",
-    "*.pdb",
-    "*.psd",
-    "*.pyc",
-    "*.pyo",
-    "*.sassc",
-    "*.scssc",
-    "*.sdf",
-    "*.so",
-    "*.suo",
-    ".DS_Store"
-  ],
-  "folder_exclude_patterns":
-  [
-    ".cache",
-    ".bundle",
-    ".git",
-    ".hg",
-    ".sass-cache",
-    ".svn",
-    "bin",
-    "CVS"
-  ],
-  "font_size": 13.0,
-  "rulers":
-  [
-    80
-  ],
-  "spell_check": true,
-  "tab_size": 2,
-  "theme": "Soda Light 3.sublime-theme",
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": false
+	"color_scheme": "Packages/User/Popcorn (SL).tmTheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"draw_white_space": "selection",
+	"enable_live_count": true,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.a",
+		"*.class",
+		"*.db",
+		"*.dll",
+		"*.dylib",
+		"*.exe",
+		"*.idb",
+		"*.lib",
+		"*.ncb",
+		"*.o",
+		"*.obj",
+		"*.pdb",
+		"*.psd",
+		"*.pyc",
+		"*.pyo",
+		"*.sassc",
+		"*.scssc",
+		"*.sdf",
+		"*.so",
+		"*.suo",
+		".DS_Store"
+	],
+	"folder_exclude_patterns":
+	[
+		".cache",
+		".bundle",
+		".git",
+		".hg",
+		".sass-cache",
+		".svn",
+		"bin",
+		"CVS"
+	],
+	"font_size": 13.0,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Markdown"
+	],
+	"rulers":
+	[
+		80
+	],
+	"spell_check": true,
+	"tab_size": 2,
+	"theme": "Soda Light 3.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": false
 }
