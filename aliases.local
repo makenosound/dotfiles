@@ -1,5 +1,5 @@
 # Personal
-alias notes="subl -n '~/Dropbox (Personal)/Apps/Editorial'"
+alias notes="subl -n '~/Dropbox (Personal)/Notes'"
 
 # Git
 alias gs='git status'
