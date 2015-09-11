@@ -1,0 +1,6 @@
+[
+  { "keys": ["super+shift+e"], "command": "reveal_in_side_bar" },
+  // Swap the keybindings for paste and paste_and_indent
+  { "keys": ["super+v"], "command": "paste_and_indent" },
+  { "keys": ["super+shift+v"], "command": "paste" }
+]
