@@ -37,20 +37,43 @@
 		".sass-cache",
 		".svn",
 		"bin",
-		"CVS"
+		"build",
+		"CVS",
+		"node_modules",
+		"public/assets"
 	],
-	"font_size": 13.0,
+	"font_face": "Inconsolata-dz",
+	"font_options":
+	[
+		"antialias"
+	],
+	"font_size": 12.0,
 	"ignored_packages":
 	[
 		"Vintage",
 		"Markdown"
 	],
+	"paths":
+	{
+		"linux":
+		[
+		],
+		"osx":
+		[
+			"~/.rbenv/shims",
+			"~/.nodenv/shims"
+		],
+		"windows":
+		[
+		]
+	},
 	"rulers":
 	[
 		80
 	],
 	"spell_check": true,
 	"tab_size": 2,
+	"detect_indentation": false,
 	"theme": "Soda Light 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": false
