@@ -14,4 +14,4 @@ export VISUAL=subl
 export EDITOR=$VISUAL
 
 # Alter word boundaries exclude /-_
-export WORDCHARS='*?.[]~=&;!#$%^(){}<>'
+export WORDCHARS='*?[]~=&;!#$%^(){}<>'
