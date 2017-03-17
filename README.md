@@ -11,7 +11,7 @@ brew install rcm
 git clone https://github.com/icelab/dotfiles.git ~/.dotfiles-icelab
 git clone https://github.com/makenosound/dotfiles.git ~/.dotfiles-personal
 
-rcup -d ~/.dotfiles-personal ~/.dotfiles-icelab  -x README.md -x LICENSE
+rcup -d ~/.dotfiles-personal -d ~/.dotfiles-icelab  -x README.md -x LICENSE
 ```
 
 ## Credits
