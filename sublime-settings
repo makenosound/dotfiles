@@ -44,9 +44,10 @@
 		"build",
 		"CVS",
 		"node_modules",
-		"public/assets"
+		"public/assets",
+    ".tmp"
 	],
-	"font_face": "SF Mono Medium",
+	"font_face": "SFMono-Medium",
 	"font_options":
 	[
 		"subpixel_antialias"
