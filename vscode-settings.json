@@ -1,0 +1,21 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.fontSize": 13,
+  "editor.fontFamily": "SFMono-Medium",
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": true,
+  "workbench.welcome.enabled": false,
+  "workbench.quickOpen.closeOnFocusLost": false,
+  "workbench.colorTheme": "Popcorn",
+
+  // Prettier overrides
+  // If true, will use single instead of double quotes
+  "prettier.singleQuote": true,
+  // Controls the printing of trailing commas wherever possible
+  "prettier.trailingComma": "es5",
+
+  // Controls if the minimap is shown
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+}

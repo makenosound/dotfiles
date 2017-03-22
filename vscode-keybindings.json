@@ -1,0 +1,56 @@
+// Place your key bindings in this file to overwrite the defaults
+[{
+    "key": "ctrl+up",
+    "command": "cursorColumnSelectUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "cursorColumnSelectDown",
+    "when": "editorTextFocus"
+  {
+  },
+    "key": "ctrl+left",
+    "command": "subwordNavigation.cursorSubwordLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "subwordNavigation.cursorSubwordRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "subwordNavigation.cursorSubwordLeftSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "subwordNavigation.cursorSubwordRightSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+backspace",
+    "command": "subwordNavigation.deleteSubwordLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+delete",
+    "command": "subwordNavigation.deleteSubwordRight",
+    "when": "editorTextFocus"
+  },
+  // Select open tabs with cmd+n
+  { "key": "cmd+1","command": "workbench.action.openEditorAtIndex1" },
+  { "key": "cmd+2","command": "workbench.action.openEditorAtIndex2" },
+  { "key": "cmd+3","command": "workbench.action.openEditorAtIndex3" },
+  { "key": "cmd+4","command": "workbench.action.openEditorAtIndex4" },
+  { "key": "cmd+5","command": "workbench.action.openEditorAtIndex5" },
+  { "key": "cmd+6","command": "workbench.action.openEditorAtIndex6" },
+  { "key": "cmd+7","command": "workbench.action.openEditorAtIndex7" },
+  { "key": "cmd+8","command": "workbench.action.openEditorAtIndex8" },
+  { "key": "cmd+9","command": "workbench.action.openEditorAtIndex9" },
+  // Use same shortcut as Sublime Text
+  { "key": "cmd+r", "command": "workbench.action.gotoSymbol" },
+  // Switch windows
+  { "key": "shift+cmd+o", "command": "workbench.action.switchWindow" },
+]
