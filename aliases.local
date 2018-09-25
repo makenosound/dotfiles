@@ -2,23 +2,23 @@
 alias notes="subl -n '~/Dropbox (Personal)/Notes'"
 
 # Git
-alias gs='git status'
-alias gd='git diff'
-alias gb='git branch'
-alias gr='git remote -v show'
-alias gsp='git smart-pull'
+alias gs="git status"
+alias gd="git diff"
+alias gb="git branch"
+alias gr="git remote -v show"
+alias gsp="git smart-pull"
 
 # Rails
-alias be='bundle exec'
+alias be="bundle exec"
 
 # Nodenv
 alias ne="nodenv exec"
 
 # Hosts
-alias edithosts='code /etc/hosts'
+alias edithosts="code /etc/hosts"
 
 # Webservers
-alias pserve='python -m SimpleHTTPServer'
+alias pserve="python -m SimpleHTTPServer"
 serve() { ruby -run -e httpd "$*" -p5000 }
 
 # OS X
