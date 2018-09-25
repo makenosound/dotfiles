@@ -2,14 +2,13 @@
 [{
     "key": "ctrl+up",
     "command": "cursorColumnSelectUp",
-    "when": "editorTextFocus"
+    "when": "textInputFocus"
   },
   {
     "key": "ctrl+down",
     "command": "cursorColumnSelectDown",
-    "when": "editorTextFocus"
-  {
-  },
+    "when": "textInputFocus"
+  }, {
     "key": "ctrl+left",
     "command": "subwordNavigation.cursorSubwordLeft",
     "when": "editorTextFocus"
@@ -40,17 +39,98 @@
     "when": "editorTextFocus"
   },
   // Select open tabs with cmd+n
-  { "key": "cmd+1","command": "workbench.action.openEditorAtIndex1" },
-  { "key": "cmd+2","command": "workbench.action.openEditorAtIndex2" },
-  { "key": "cmd+3","command": "workbench.action.openEditorAtIndex3" },
-  { "key": "cmd+4","command": "workbench.action.openEditorAtIndex4" },
-  { "key": "cmd+5","command": "workbench.action.openEditorAtIndex5" },
-  { "key": "cmd+6","command": "workbench.action.openEditorAtIndex6" },
-  { "key": "cmd+7","command": "workbench.action.openEditorAtIndex7" },
-  { "key": "cmd+8","command": "workbench.action.openEditorAtIndex8" },
-  { "key": "cmd+9","command": "workbench.action.openEditorAtIndex9" },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.openEditorAtIndex1"
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "cmd+4",
+    "command": "workbench.action.openEditorAtIndex4"
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.action.openEditorAtIndex5"
+  },
+  {
+    "key": "cmd+6",
+    "command": "workbench.action.openEditorAtIndex6"
+  },
+  {
+    "key": "cmd+7",
+    "command": "workbench.action.openEditorAtIndex7"
+  },
+  {
+    "key": "cmd+8",
+    "command": "workbench.action.openEditorAtIndex8"
+  },
+  {
+    "key": "cmd+9",
+    "command": "workbench.action.openEditorAtIndex9"
+  },
   // Use same shortcut as Sublime Text
-  { "key": "cmd+r", "command": "workbench.action.gotoSymbol" },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.gotoSymbol"
+  },
   // Switch windows
-  { "key": "shift+cmd+o", "command": "workbench.action.switchWindow" },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.switchWindow"
+  },
+  // Show all symbols in project
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+numpad_add",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "shift+cmd+=",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "cmd+=",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "cmd+numpad_subtract",
+    "command": "editor.action.fontZoomOut"
+  },
+  {
+    "key": "shift+cmd+-",
+    "command": "editor.action.fontZoomOut"
+  },
+  {
+    "key": "cmd+-",
+    "command": "editor.action.fontZoomOut"
+  },
+  {
+    "key": "cmd+numpad0",
+    "command": "editor.action.fontZoomReset"
+  },
+  {
+    "key": "cmd+0",
+    "command": "editor.action.fontZoomReset"
+  },
+  // Search inputs
+  {
+    "key": "down",
+    "command": "search.focus.nextInputBox",
+    "when": "inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "up",
+    "command": "search.focus.previousInputBox",
+    "when": "inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+  },
 ]

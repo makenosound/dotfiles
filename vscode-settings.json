@@ -1,21 +1,100 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "editor.fontSize": 13,
-  "editor.fontFamily": "SFMono-Medium",
+  // "editor.fontSize": 14,
+  // "editor.lineHeight": 0,
+  // "editor.fontFamily": "SFMono-Medium",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 21,
+  "editor.fontFamily": "IBMPlexMono-Text",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
-  "editor.wordWrap": true,
-  "workbench.welcome.enabled": false,
+  "editor.autoIndent": true,
+  "editor.rulers": [80, 120],
+  "files.exclude": {
+    "node_modules": true,
+    "vendor": true,
+    "release-builds": true,
+    "public/assets": true
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  // Controls if opened editors show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
+  "workbench.editor.enablePreview": false,
   "workbench.quickOpen.closeOnFocusLost": false,
-  "workbench.colorTheme": "Popcorn",
-
-  // Prettier overrides
-  // If true, will use single instead of double quotes
-  "prettier.singleQuote": true,
-  // Controls the printing of trailing commas wherever possible
-  "prettier.trailingComma": "es5",
+  "workbench.colorTheme": "Alabaster",
+  // "workbench.colorTheme": "Ayu Light",
 
   // Controls if the minimap is shown
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
+
+  // Beautify
+  "beautify.language": {
+    "css": [
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html"
+    ]
+  },
+  "workbench.activityBar.visible": false,
+  "window.zoomLevel": 0,
+  // Hide sidebar stuff
+  "docker.showExplorer": false,
+  "explorer.openEditors.visible": 0,
+  "workbench.iconTheme": "ayu",
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    [
+      "mediumslateblue",
+      "limegreen",
+      "goldenrod"
+    ],
+    "Red"
+  ],
+  "bracketPairColorizer.independentPairColors": [
+    [
+      "()",
+      [
+        "mediumslateblue",
+        "limegreen",
+        "goldenrod"
+      ],
+      "Red"
+    ],
+    [
+      "[]",
+      [
+        "mediumslateblue",
+        "limegreen",
+        "goldenrod"
+      ],
+      "Red"
+    ],
+    [
+      "{}",
+      [
+        "mediumslateblue",
+        "limegreen",
+        "goldenrod"
+      ],
+      "Red"
+    ]
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "[javascript]": {},
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "github.hosts": [
+    {
+      "host": "https://github.com",
+      "username": "oauth",
+      "token": "system"
+    }
+  ],
+  // phpfmt
+  "phpfmt.indent_with_space": 2,
+  "phpfmt.psr2": false,
+  "breadcrumbs.enabled": true,
 }
