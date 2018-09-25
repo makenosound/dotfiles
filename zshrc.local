@@ -15,3 +15,6 @@ export EDITOR=$VISUAL
 
 # Alter word boundaries exclude /-_
 export WORDCHARS='*?[]~=&;!#$%^(){}<>'
+
+# Add python bins to PATH for aws
+export PATH=~/Library/Python/3.5/bin:$PATH
