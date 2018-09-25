@@ -10,11 +10,18 @@ if $(grc &>/dev/null); then
   source "`brew --prefix`/etc/grc.bashrc"
 fi
 
-export VISUAL=code
-export EDITOR=$VISUAL
-
-# Alter word boundaries exclude /-_
+# The default WORDCHARS is '*?_-.[]~=/&;!#$%^(){}<>'. This includes the
+# following characters:
+#
+# - `/`
+# - `_`
+# - `=`
+#
+# With this configuration, the CTRL+W "delete last word" shortcut will delete
+# over the top of these characters, when (in my usage) they're usually
+# helpful as "word" boundaries. Removing them from the list ensures that
+# CTRL+W will only delete back to the last one of these characters.
 export WORDCHARS='*?[]~=&;!#$%^(){}<>'
 
-# Add python bins to PATH for aws
-export PATH=~/Library/Python/3.5/bin:$PATH
+export VISUAL=code
+export EDITOR=$VISUAL
