@@ -15,8 +15,6 @@ alias mate="subl -n"
 # Rails
 alias ss="./script/server"
 alias be='bundle exec'
-alias dbm='bundle exec rake db:migrate'
-alias dbm0='bundle exec rake db:migrate VERSION=0'
 
 # Nodenv
 alias ne="nodenv exec"
@@ -41,3 +39,5 @@ if $(gls &>/dev/null); then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+alias ls="exa -l --git"
