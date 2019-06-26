@@ -23,5 +23,12 @@ fi
 # CTRL+W will only delete back to the last one of these characters.
 export WORDCHARS='*?[]~=&;!#$%^(){}<>'
 
+# asdf
+# Removed after switch to strap
+# . $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/completions/asdf.bash
+
 export VISUAL=code
 export EDITOR=$VISUAL
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

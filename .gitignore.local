@@ -2,3 +2,11 @@
 *.sass-cache
 *.sublime-project
 *.sublime-workspace
+*.dump
+coverage
+postgres/
+yarn-error.log
+.overmind*
+node_modules
+.vscode
+.byebug_history

@@ -1,18 +1,12 @@
-# Personal
-alias notes="subl -n '~/Dropbox (Personal)/Notes'"
-
 # Git
-alias gs="git status"
+alias gss="git status"
 alias gd="git diff"
 alias gb="git branch"
 alias gr="git remote -v show"
-alias gsp="git smart-pull"
+alias gsp="git stash && git pull --rebase"
 
 # Rails
 alias be="bundle exec"
-
-# Nodenv
-alias ne="nodenv exec"
 
 # Hosts
 alias edithosts="code /etc/hosts"
@@ -32,3 +26,8 @@ if $(exa &>/dev/null); then
   alias lt="exa -lT"
   alias ll="exa -la --git"
 fi
+
+alias md5sum="md5 -r"
+
+# Git
+rubocop-diff() { git diff-tree -r --no-commit-id --name-only head origin/$* | xargs rubocop }

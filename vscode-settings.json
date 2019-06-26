@@ -2,19 +2,17 @@
 {
   // "editor.fontSize": 14,
   // "editor.lineHeight": 0,
-  // "editor.fontFamily": "SFMono-Medium",
-  "editor.fontSize": 14,
-  "editor.lineHeight": 21,
-  "editor.fontFamily": "IBMPlexMono-Text",
+  // "editor.fontFamily": "SF Mono Regular",
+  "editor.fontSize": 18,
+  "editor.fontFamily": "OperatorMono-Book",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
   "editor.autoIndent": true,
   "editor.rulers": [80, 120],
   "files.exclude": {
     "node_modules": true,
-    "vendor": true,
-    "release-builds": true,
-    "public/assets": true
+    "public/assets": true,
+    "release-builds": true
   },
   "workbench.startupEditor": "newUntitledFile",
   // Controls if opened editors show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
@@ -84,7 +82,9 @@
     ]
   ],
   "explorer.confirmDragAndDrop": false,
-  "[javascript]": {},
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "github.hosts": [
     {
@@ -97,4 +97,21 @@
   "phpfmt.indent_with_space": 2,
   "phpfmt.psr2": false,
   "breadcrumbs.enabled": true,
+  "solargraph.commandPath": "/Users/max/.rbenv/shims/solargraph",
+  // Ruby
+  "ruby.lint": {
+    "reek": false,
+    "rubocop": true,
+    "ruby": true,
+    "fasterer": false,
+    "debride": false,
+    "ruby-lint": false
+  },
+  "editor.fontWeight": "500",
+  "editor.lineHeight": 25,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.insertFinalNewline": true,
+  "files.defaultLanguage": "markdown"
 }

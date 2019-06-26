@@ -133,4 +133,8 @@
     "command": "search.focus.previousInputBox",
     "when": "inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
   },
+  {
+    "key": "cmd+;",
+    "command": "findJump.activate"
+  },
 ]
