@@ -4,15 +4,17 @@
   // "editor.lineHeight": 0,
   // "editor.fontFamily": "SF Mono Regular",
   "editor.fontSize": 16,
-  "editor.fontFamily": "RecursiveMonoB_020-LnrRg",
+  "editor.fontFamily": "JetBrainsMono-Regular",
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
   "editor.autoIndent": true,
   "editor.rulers": [80, 120],
   "files.exclude": {
+    "coverage": true,
     "node_modules": true,
     "public/assets": true,
-    "release-builds": true
+    "release-builds": true,
+    "tmp": true
   },
   "workbench.startupEditor": "newUntitledFile",
   // Controls if opened editors show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
@@ -186,5 +188,7 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.fontAliasing": "antialiased",
+  "search.searchOnType": false
 }
