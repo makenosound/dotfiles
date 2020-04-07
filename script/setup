@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+cd $(dirname "$0")
+
+# Install dotfiles
+brew bundle --file=- <<EOF
+  tap "thoughtbot/formulae"
+  brew "rcm"
+EOF
+RCRC=~/.dotfiles/rcrc rcup
+
+# ༼ つ ◕_◕ ༽つ Give SETUP
+./install-vscode-extensions
+./install-heroku-plugins
