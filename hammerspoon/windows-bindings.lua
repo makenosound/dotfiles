@@ -29,8 +29,8 @@ return {
   showHelp  = false,
   trigger   = 's',
   mappings  = {
-    { {},         'return', 'maximize' },
-    { {},         'space',  'centerWithFullHeight' },
+    { {},         'f', 'maximize' },
+    { {},         's',  'centerWithFullHeight' },
     { {},         'h',      'left' },
     { {},         'j',      'down' },
     { {},         'k',      'up' },

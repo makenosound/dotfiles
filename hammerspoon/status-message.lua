@@ -9,15 +9,15 @@ statusmessage.new = function(messageText)
     local frame = screen.primaryScreen():frame()
 
     local styledTextAttributes = {
-      font = { name = 'Monaco', size = 24 },
+      font = { name = 'JetBrainsMono-Regular', size = 24 },
     }
 
     local styledText = styledtext.new('🔨 ' .. messageText, styledTextAttributes)
 
     local styledTextSize = drawing.getTextDrawingSize(styledText)
     local textRect = {
-      x = frame.w - styledTextSize.w - 40,
-      y = frame.h - styledTextSize.h,
+      x = frame.w - styledTextSize.w - 20,
+      y = frame.h - styledTextSize.h - 8,
       w = styledTextSize.w + 40,
       h = styledTextSize.h + 40,
     }
@@ -25,14 +25,14 @@ statusmessage.new = function(messageText)
 
     local background = drawing.rectangle(
       {
-        x = frame.w - styledTextSize.w - 45,
-        y = frame.h - styledTextSize.h - 3,
-        w = styledTextSize.w + 15,
+        x = frame.w - styledTextSize.w - 30,
+        y = frame.h - styledTextSize.h - 10,
+        w = styledTextSize.w + 25,
         h = styledTextSize.h + 6
       }
     )
     background:setRoundedRectRadii(10, 10)
-    background:setFillColor({ red = 0, green = 0, blue = 0, alpha=0.6 })
+    background:setFillColor({ red = 255, green = 255, blue = 255, alpha=0.9 })
 
     return background, text
   end
