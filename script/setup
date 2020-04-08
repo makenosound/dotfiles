@@ -11,6 +11,7 @@ EOF
 RCRC=~/.dotfiles/rcrc rcup
 
 # ༼ つ ◕_◕ ༽つ Give SETUP
+brew bundle --file=../Brewfile
 ./bootstrap-hammerspoon
 ./install-vscode-extensions
 ./install-heroku-plugins
