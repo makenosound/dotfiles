@@ -14,3 +14,4 @@ RCRC=~/.dotfiles/rcrc rcup
 ./bootstrap-hammerspoon
 ./install-vscode-extensions
 ./install-heroku-plugins
+./set-macos-defaults
