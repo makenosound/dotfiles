@@ -27,3 +27,6 @@ export VISUAL=code
 export EDITOR=$VISUAL
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Increase open files limit beyond default of 256
+ulimit -n 2048
