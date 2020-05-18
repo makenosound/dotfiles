@@ -10,9 +10,11 @@ CraigMaslowski.erb
 dbaeumer.vscode-eslint
 dbankier.vscode-quick-select
 esbenp.prettier-vscode
+flowtype.flow-for-vscode
 HookyQR.beautify
 IBM.output-colorizer
 jianbingfang.dupchecker
+karunamurti.haml
 kokororin.vscode-phpfmt
 MattiasPernhult.vscode-todo
 mikestead.dotenv
@@ -30,12 +32,13 @@ pflannery.vscode-versionlens
 rebornix.ruby
 Rubymaniac.vscode-paste-and-indent
 samverschueren.final-newline
-sbrink.elm
+Elmtooling.elm-ls-vscode
 shardulm94.trailing-spaces
 sianglim.slim
 SirTori.indenticator
 stkb.rewrap
 teabyii.ayu
+tinaciousdesign.theme-tinaciousdesign
 TomasHubelbauer.vscode-markdown-link-suggestions
 tonsky.theme-alabaster
 ue.alphabetical-sorter
