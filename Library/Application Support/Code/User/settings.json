@@ -1,14 +1,17 @@
-// Place your settings in this file to overwrite the default settings
 {
-  // "editor.fontSize": 14,
-  // "editor.lineHeight": 0,
-  // "editor.fontFamily": "SF Mono Regular",
-  "editor.fontSize": 16,
+  "breadcrumbs.enabled": true,
+  "editor.autoIndent": "full",
   "editor.fontFamily": "JetBrainsMono-Regular",
-  "editor.tabSize": 2,
+  "editor.fontSize": 16,
+  "editor.fontWeight": "500",
+  "editor.lineHeight": 25,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
   "editor.renderWhitespace": "boundary",
-  "editor.autoIndent": true,
   "editor.rulers": [80, 120],
+  "editor.tabSize": 2,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
   "files.exclude": {
     "coverage": true,
     "node_modules": true,
@@ -16,91 +19,26 @@
     "release-builds": true,
     "tmp": true
   },
-  "workbench.startupEditor": "newUntitledFile",
-  // Controls if opened editors show as preview. Preview editors are reused until they are kept (e.g. via double click or editing).
-  "workbench.editor.enablePreview": false,
-  "workbench.quickOpen.closeOnFocusLost": false,
-  "workbench.colorTheme": "Alabaster",
-  // "workbench.colorTheme": "Ayu Light",
-
-  // Controls if the minimap is shown
-  "editor.minimap.enabled": true,
-  "editor.minimap.renderCharacters": false,
-
-  // Beautify
-  "beautify.language": {
-    "css": [
-      "scss"
-    ],
-    "html": [
-      "htm",
-      "html"
-    ]
-  },
-  "workbench.activityBar.visible": false,
-  "window.zoomLevel": 0,
-  // Hide sidebar stuff
-  "docker.showExplorer": false,
-  "explorer.openEditors.visible": 0,
-  "workbench.iconTheme": "ayu",
-  "bracketPairColorizer.consecutivePairColors": [
-    "()",
-    "[]",
-    "{}",
-    [
-      "mediumslateblue",
-      "limegreen",
-      "goldenrod"
-    ],
-    "Red"
-  ],
-  "bracketPairColorizer.independentPairColors": [
-    [
-      "()",
-      [
-        "mediumslateblue",
-        "limegreen",
-        "goldenrod"
-      ],
-      "Red"
-    ],
-    [
-      "[]",
-      [
-        "mediumslateblue",
-        "limegreen",
-        "goldenrod"
-      ],
-      "Red"
-    ],
-    [
-      "{}",
-      [
-        "mediumslateblue",
-        "limegreen",
-        "goldenrod"
-      ],
-      "Red"
-    ]
-  ],
-  "explorer.confirmDragAndDrop": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "github.hosts": [
-    {
-      "host": "https://github.com",
-      "username": "oauth",
-      "token": "system"
-    }
-  ],
-  // phpfmt
-  "phpfmt.indent_with_space": 2,
-  "phpfmt.psr2": false,
-  "breadcrumbs.enabled": true,
+  "files.defaultLanguage": "markdown",
+  "files.insertFinalNewline": true,
+  "search.searchOnType": false,
+  "search.useIgnoreFiles": false,
   "solargraph.commandPath": "/Users/max/.asdf/shims/solargraph",
-  // Ruby
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Alabaster",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.iconTheme": "ayu",
+  "workbench.quickOpen.closeOnFocusLost": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.indent": 10,
+  "workbench.tree.renderIndentGuides": "always",
+  // Language settings
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "ruby.codeCompletion": "rcodetools",
   "ruby.lint": {
     "reek": false,
     "rubocop": true,
@@ -109,78 +47,14 @@
     "debride": false,
     "ruby-lint": false
   },
-  "editor.fontWeight": "500",
-  "editor.lineHeight": 25,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.insertFinalNewline": true,
-  "files.defaultLanguage": "markdown",
+  "ruby.useBundler": true,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.tree.indent": 10,
-  "workbench.tree.renderIndentGuides": "always",
-  "workbench.editor.tabSizing": "shrink",
-  "peacock.favoriteColors": [
-    {
-      "name": "Angular Red",
-      "value": "#b52e31"
-    },
-    {
-      "name": "Auth0 Orange",
-      "value": "#eb5424"
-    },
-    {
-      "name": "Azure Blue",
-      "value": "#007fff"
-    },
-    {
-      "name": "C# Purple",
-      "value": "#68217A"
-    },
-    {
-      "name": "Gatsby Purple",
-      "value": "#639"
-    },
-    {
-      "name": "Go Cyan",
-      "value": "#5dc9e2"
-    },
-    {
-      "name": "Java Blue-Gray",
-      "value": "#557c9b"
-    },
-    {
-      "name": "JavaScript Yellow",
-      "value": "#f9e64f"
-    },
-    {
-      "name": "Mandalorian Blue",
-      "value": "#1857a4"
-    },
-    {
-      "name": "Node Green",
-      "value": "#215732"
-    },
-    {
-      "name": "React Blue",
-      "value": "#00b3e6"
-    },
-    {
-      "name": "Something Different",
-      "value": "#832561"
-    },
-    {
-      "name": "Vue Green",
-      "value": "#42b883"
-    }
-  ],
-  "ruby.codeCompletion": "rcodetools",
-  "ruby.useBundler": true,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "search.useIgnoreFiles": false,
-  "[typescript]": {
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
@@ -189,6 +63,7 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.fontAliasing": "antialiased",
-  "search.searchOnType": false
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }

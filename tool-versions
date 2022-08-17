@@ -1,5 +1,0 @@
-postgres 10.5
-java adopt-openjdk-12+33
-nodejs 12.16.1
-ruby 2.7.1
-elasticsearch 7.2.1
