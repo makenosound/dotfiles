@@ -13,7 +13,6 @@
   rebase = true
 [core]
   editor = code -n -w
-  excludesfile = ~/.gitignore
   autocrlf = input
 [credential]
   helper = osxkeychain
