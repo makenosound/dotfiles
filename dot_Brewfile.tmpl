@@ -1,0 +1,116 @@
+{{- if (eq .chezmoi.os "darwin") -}}
+
+{{- $taps := list
+  "homebrew/cask"
+  "homebrew/cask-fonts"
+  "homebrew/cask-versions"
+-}}
+
+{{- $brews := list
+  "ack"
+  "asdf"
+  "chezmoi"
+  "direnv"
+  "duti"
+  "exa"
+  "figlet"
+  "ffmpeg"
+  "gh"
+  "graphviz"
+  "httpie"
+  "imagemagick"
+  "jq"
+  "moreutils"
+  "overmind"
+  "p7zip"
+  "pgcli"
+  "pspg"
+  "shellcheck"
+  "tree"
+  "wget"
+  "yarn"
+-}}
+
+{{/* Dependencies for building postgres via asdf */}}
+{{- $brews = concat $brews (list
+  "gcc"
+  "readline"
+  "zlib"
+  "curl"
+  "ossp-uuid")
+-}}
+
+{{/* Re: dockutil, see https://github.com/kcrawford/dockutil/issues/127#issuecomment-1118733013 */}}
+
+{{- $casks := list
+  "1password"
+  "1password-cli"
+  "aws-vault"
+  "backblaze"
+  "dash"
+  "discord"
+  "docker"
+  "dropbox"
+  "hpedrorodrigues/tools/dockutil"
+  "fantastical"
+  "firefox"
+  "font-ia-writer-duo"
+  "font-ia-writer-duospace"
+  "font-ia-writer-mono"
+  "font-ia-writer-quattro"
+  "font-jetbrains-mono"
+  "fork"
+  "hammerspoon"
+  "handbrake"
+  "hazel"
+  "google-chrome"
+  "iterm2"
+  "imagealpha"
+  "imageoptim"
+  "keyboardcleantool"
+  "launchbar"
+  "menuwhere"
+  "muzzle"
+  "numi"
+  "openemu"
+  "paw"
+  "pika"
+  "postico"
+  "slack"
+  "superduper"
+  "transmission"
+  "transmit"
+  "visual-studio-code"
+  "vlc"
+  "zoom"
+-}}
+
+{{- $apps := list
+  "BBEdit -> 404009241"
+  "1Blocker -> 1365531024"
+  "Craft -> 1487937127"
+  "iA Writer -> 775737590"
+  "Keynote -> 409183694"
+  "Numbers -> 409203825"
+  "Reeder -> 1529448980"
+  "SiteSucker -> 442168834"
+  "Soulver -> 413965349"
+  "Spark -> 1176895641"
+  "Telegram -> 747648890"
+-}}
+
+{{ range ($taps | sortAlpha | uniq) -}}
+tap "{{ . }}"
+{{ end }}
+{{ range ($brews | sortAlpha | uniq) -}}
+brew "{{ . }}"
+{{ end }}
+{{ range ($casks | sortAlpha | uniq) -}}
+cask "{{ . }}"
+{{ end }}
+{{ range ($apps | sortAlpha | uniq) -}}
+{{- $app := split " -> " . -}}
+mas "{{ $app._0 }}", id: {{ $app._1 }}
+{{ end -}}
+
+{{- end -}}
