@@ -1,6 +1,7 @@
 {{- if (eq .chezmoi.os "darwin") -}}
 
 {{- $taps := list
+  "heroku/brew"
   "homebrew/cask"
   "homebrew/cask-fonts"
   "homebrew/cask-versions"
@@ -17,6 +18,7 @@
   "ffmpeg"
   "gh"
   "graphviz"
+  "heroku"
   "httpie"
   "imagemagick"
   "jq"
