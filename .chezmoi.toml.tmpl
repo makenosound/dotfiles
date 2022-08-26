@@ -1,5 +1,6 @@
 {{/* boolean feature tags */}}
 {{- $personal := false -}}{{/* true if this is my personal machine */}}
+{{- $eql := false -}}{{/* true if this is my work machine */}}
 {{- "" -}}
 
 {{- $osID := .chezmoi.os -}}
@@ -14,14 +15,19 @@
 {{-   if eq $computerName "Max’s MacBook Pro" -}}
 {{-     $hostname = "maxs-mba" -}}
 {{-     $hostname = $computerName -}}
+{{-   else if eq $computerName "max-eql" -}}
+{{-     $hostname = "eql-mbp" -}}
 {{-   end -}}
 {{- end -}}
 
 {{- if eq $hostname "maxs-mba" -}}
 {{-   $personal = true -}}
+{{- else if eq $hostname "eql-mbp" -}}
+{{-   $eql = true -}}
 {{- end -}}
 
 [data]
   hostname = {{ $hostname | quote }}
   personal = {{ $personal }}
+  eql = {{ $eql }}
   osid = {{ $osID | quote }}
