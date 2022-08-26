@@ -7,6 +7,12 @@
   "homebrew/cask-versions"
 -}}
 
+{{ if .eql -}}
+{{- $taps = concat $taps (list
+  "aws/tap")
+-}}
+{{ end -}}
+
 {{- $brews := list
   "ack"
   "asdf"
@@ -17,6 +23,7 @@
   "figlet"
   "ffmpeg"
   "gh"
+  "git"
   "graphviz"
   "heroku"
   "httpie"
@@ -44,6 +51,20 @@
   "ossp-uuid")
 -}}
 
+{{ if .eql -}}
+{{- $brews = concat $brews (list
+  "awscli"
+  "aws/tap/aws-sam-cli"
+  "gatsby-cli"
+  "go"
+  "golangci-lint"
+  "leapp"
+  "make"
+  "session-manager-plugin"
+  "wkhtmltopdf")
+-}}
+{{ end -}}
+
 {{/* Re: dockutil, see https://github.com/kcrawford/dockutil/issues/127#issuecomment-1118733013 */}}
 
 {{- $casks := list
@@ -68,7 +89,6 @@
   "hammerspoon"
   "handbrake"
   "hazel"
-  "google-chrome"
   "iterm2"
   "imagealpha"
   "imageoptim"
@@ -90,6 +110,12 @@
   "zoom"
 -}}
 
+{{ if .personal -}}
+{{- $casks = concat $casks (list
+  "google-chrome")
+-}}
+{{ end -}}
+
 {{- $apps := list
   "BBEdit -> 404009241"
   "1Blocker -> 1365531024"
@@ -103,6 +129,12 @@
   "Spark -> 1176895641"
   "Telegram -> 747648890"
 -}}
+
+{{ if .eql -}}
+{{- $apps = concat $apps (list
+  "GoLinks -> 1478821913")
+-}}
+{{ end -}}
 
 {{ range ($taps | sortAlpha | uniq) -}}
 tap "{{ . }}"

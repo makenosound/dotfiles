@@ -6,6 +6,11 @@ asdf plugin add nodejs
 asdf plugin add postgres
 asdf plugin add ruby
 
+{{ if .eql -}}
+asdf plugin add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin add golangci-lint https://github.com/hypnoglow/asdf-golangci-lint.git
+{{ end -}}
+
 # Ensure this script runs on .tool-versions changes by including a hash of its file contents:
 ~/.tool-versions: {{ include (joinPath .chezmoi.homeDir ".tool-versions") | sha256sum }}
 
