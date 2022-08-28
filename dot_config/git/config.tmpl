@@ -27,3 +27,8 @@
   autoRemoteSetup = true
 [pull]
   rebase = true
+
+{{ if .eql -}}
+[includeIf "gitdir/i:~/eql/"]
+  path = ~/.config/git/eql.gitconfig
+{{ end -}}
