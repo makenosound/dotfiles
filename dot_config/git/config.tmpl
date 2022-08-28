@@ -1,0 +1,29 @@
+[user]
+  name = Max Wheeler
+  email = max@makenosound.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPsbpVzTnJliXeqGzrX6DUEiLCfs7v91ZUZQz2opQt6J
+[alias]
+  ap = add --patch
+  co = checkout
+[color]
+  ui = auto
+[commit]
+  gpgsign = true
+[core]
+  autocrlf = input
+  editor = code -n -w
+  excludesfile = ~/.gitignore
+[fetch]
+  prune = true
+[github]
+  user = makenosound
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  # See https://1password.community/discussion/131318/ssh-commit-signing
+  program = {{ .chezmoi.homeDir }}/.config/git/gpg-ssh-program
+[push]
+  default = current
+  autoRemoteSetup = true
+[pull]
+  rebase = true
