@@ -30,3 +30,23 @@ code --force --install-extension {{ . }}
 {{ end -}}
 
 {{ end -}}
+
+# EQL’s recommended
+# ~/eql/eql.code-workspace
+{{- $brews = concat $brews (list
+  "amatiasq.sort-imports"
+  "aws-scripting-guy.cform"
+  "dbaeumer.vscode-eslint"
+  "editorconfig.editorconfig"
+  "foxundermoon.shell-format"
+  "golang.go"
+  "graphql.vscode-graphql"
+  "kddejong.vscode-cfn-lint"
+  "mgmcdermott.vscode-language-babel"
+  "mike-co.import-sorter"
+  "msjsdiag.debugger-for-chrome"
+  "orta.vscode-jest"
+  "redhat.vscode-yaml"
+  "tht13.html-preview-vscode"
+  "zengxingxin.sort-js-object-keys"
+-}}
