@@ -1,5 +1,9 @@
 {{ if and (eq .chezmoi.os "darwin" "linux") -}}
 
+#!/bin/bash
+
+set -eufo pipefail
+
 {{ $extensions := list
   "brandoncc.vscode-seeing-is-believing"
   "castwide.solargraph"
@@ -21,19 +25,9 @@
   "ziyasal.vscode-open-in-github"
 -}}
 
-#!/bin/bash
-
-set -eufo pipefail
-
-{{ range $extensions -}}
-code --force --install-extension {{ . }}
-{{ end -}}
-
-{{ end -}}
-
 # EQL’s recommended
 # ~/eql/eql.code-workspace
-{{- $brews = concat $brews (list
+{{- $extensions = concat $extensions (list
   "amatiasq.sort-imports"
   "aws-scripting-guy.cform"
   "dbaeumer.vscode-eslint"
@@ -48,5 +42,11 @@ code --force --install-extension {{ . }}
   "orta.vscode-jest"
   "redhat.vscode-yaml"
   "tht13.html-preview-vscode"
-  "zengxingxin.sort-js-object-keys"
+  "zengxingxin.sort-js-object-keys")
 -}}
+
+{{ range $extensions -}}
+code --force --install-extension {{ . }}
+{{ end -}}
+
+{{ end -}}
