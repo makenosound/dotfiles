@@ -1,0 +1,12 @@
+{{ if (eq .chezmoi.os "darwin") -}}
+#!/bin/bash
+
+{{- if .eql -}}
+  # Set yarn global packages
+  yarn global add nx
+
+  # Ensure globals can be found
+  asdf reshim nodejs
+{{ end -}}
+
+{{ end -}}
