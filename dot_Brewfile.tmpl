@@ -58,9 +58,7 @@
   "gatsby-cli"
   "go"
   "golangci-lint"
-  "leapp"
   "make"
-  "session-manager-plugin"
   "wkhtmltopdf")
 -}}
 {{ end -}}
@@ -113,6 +111,12 @@
 {{ if .personal -}}
 {{- $casks = concat $casks (list
   "google-chrome")
+-}}
+{{ end -}}
+{{ if .eql -}}
+{{- $casks = concat $casks (list
+  "leapp"
+  "session-manager-plugin")
 -}}
 {{ end -}}
 
