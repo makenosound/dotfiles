@@ -122,7 +122,6 @@
 
 {{- $apps := list
   "BBEdit -> 404009241"
-  "1Blocker -> 1365531024"
   "Craft -> 1487937127"
   "iA Writer -> 775737590"
   "Keynote -> 409183694"
@@ -133,6 +132,8 @@
   "Spark -> 1176895641"
   "Telegram -> 747648890"
 -}}
+# Installation fails semi-regularly
+# "1Blocker -> 1365531024"
 
 {{ if .eql -}}
 {{- $apps = concat $apps (list
