@@ -41,6 +41,9 @@ if ! env | grep -q '^PS1='; then
   PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info) %# '
 fi
 
+# Set WORDCHARS to nothing https://zsh.sourceforge.io/Guide/zshguide04.html
+export WORDCHARS=""
+
 {{ if .eql -}}
   # Add ~/eql/route66 scripts to PATH
   # https://www.notion.so/officiallyeql/Dev-Environment-Setup-97dc90b17aab462eb44646b28c2fd000
