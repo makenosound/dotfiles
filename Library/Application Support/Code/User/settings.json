@@ -5,6 +5,7 @@
   "editor.fontFamily": "JetBrainsMono-Regular",
   "editor.fontSize": 16,
   "editor.fontWeight": "500",
+  "editor.formatOnSave": true,
   "editor.lineHeight": 25,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
@@ -59,6 +60,9 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -70,5 +74,5 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  }
 }
