@@ -23,6 +23,7 @@
   "files.defaultLanguage": "markdown",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "go.toolsManagement.autoUpdate": true,
   "search.searchOnType": false,
   "search.useIgnoreFiles": false,
   "solargraph.commandPath": "/Users/maxwheeler/.asdf/shims/solargraph",
@@ -41,6 +42,7 @@
   // Language settings
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "redhat.telemetry.enabled": true,
   "ruby.codeCompletion": "rcodetools",
   "ruby.lint": {
     "reek": false,
