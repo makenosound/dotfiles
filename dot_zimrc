@@ -1,6 +1,5 @@
 zmodule completion
 zmodule environment
-zmodule git
 zmodule input
 zmodule utility
 zmodule termtitle
