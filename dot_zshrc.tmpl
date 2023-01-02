@@ -50,4 +50,8 @@ export WORDCHARS=""
   export PATH=$PATH:~/eql/route66/scripts/bin
 {{- end }}
 
+fcode() {
+  code $(fd --type f | fzf)
+}
+
 {{- end }}
