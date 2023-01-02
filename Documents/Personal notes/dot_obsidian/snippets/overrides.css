@@ -1,0 +1,25 @@
+body {
+  --checkbox-radius: 4px;
+  --list-indent: 1.2em;
+}
+
+.HyperMD-list-line:not(HyperMD-task-line) .list-bullet {
+  margin-right: 0.4em;
+}
+
+.tasks-backlink,
+.tasks-backlink a {
+  color: var(--text-faint);
+}
+
+.tasks-backlink a:hover {
+  color: var(--link-color-hover);
+}
+
+ul.plugin-tasks-query-result {
+  padding-inline-start: 0;
+}
+
+.tasks-count {
+  padding-left: 0;
+}

@@ -1,0 +1,8 @@
+{
+  "accentColor": "#bc72ee",
+  "theme": "system",
+  "cssTheme": "Minimal",
+  "enabledCssSnippets": [
+    "overrides"
+  ]
+}
