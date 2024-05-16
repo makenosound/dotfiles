@@ -1,5 +1,8 @@
 body {
   --checkbox-radius: 4px;
+  --h4-variant: normal;
+  --h5-variant: normal;
+  --h6-variant: normal;
   --list-indent: 1.2em;
 }
 
@@ -23,3 +26,4 @@ ul.plugin-tasks-query-result {
 .tasks-count {
   padding-left: 0;
 }
+
