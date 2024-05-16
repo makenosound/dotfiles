@@ -10,6 +10,12 @@
   tidy = !git pull --ff-only --all --prune
   sync = "!f() { if [ -z \"$1\" ]; then echo 'Usage: git sync my-branch-to-sync [remote]'; exit 1; else git fetch ${2:-origin} ${1}:${1}; fi }; f"
   pf = push --force-with-lease
+  recent = !git for-each-ref --sort='-authordate:iso8601' --format='%(authordate:relative)%09%(refname:short)' refs/heads | head -15
+  summary = !sh -c 'git cherry -v --abbrev main "$(git rev-parse --abbrev-ref HEAD)" | cut -c 13-'
+[blame]
+  ignoreRevsFile = .git-blame-ignore-revs
+[branch]
+  sort = -committerdate
 [color]
   ui = auto
 [commit]
@@ -18,6 +24,7 @@
   autocrlf = input
   editor = code -n -w
   excludesfile = ~/.gitignore
+  hooksPath = {{ .chezmoi.homeDir }}/.config/git/hooks
 [fetch]
   prune = true
 [github]
@@ -37,5 +44,5 @@
 
 {{ if .eql -}}
 [includeIf "gitdir/i:~/eql/"]
-  path = ~/.config/git/eql.gitconfig
+  path = {{ .chezmoi.homeDir }}/.config/git/eql.gitconfig
 {{ end -}}
