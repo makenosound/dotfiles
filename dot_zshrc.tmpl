@@ -70,7 +70,10 @@ ZSH_AUTOSUGGEST_HISTORY_IGNORE="git create-branch *"
 {{- end }}
 
 fcode() {
-  code $(fd --type f | fzf)
+  path=$(fd | fzf)
+  if [ -n "$path" ]; then
+    code "$path"
+  fi
 }
 
 {{- end }}
