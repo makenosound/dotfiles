@@ -1,0 +1,169 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-[": "editor::Outdent",
+      "cmd-]": "editor::Indent",
+      "ctrl-up": "editor::AddSelectionAbove",
+      "cmd-ctrl-p": "editor::AddSelectionAbove",
+      "ctrl-down": "editor::AddSelectionBelow",
+      "cmd-ctrl-n": "editor::AddSelectionBelow",
+      "cmd-shift-k": "editor::DeleteLine",
+      "alt-up": "editor::MoveLineUp",
+      "alt-down": "editor::MoveLineDown",
+      "alt-shift-up": "editor::DuplicateLineUp",
+      "alt-shift-down": "editor::DuplicateLineDown",
+      "ctrl-shift-right": "editor::SelectToNextSubwordEnd",
+      "ctrl-shift-left": "editor::SelectToPreviousSubwordStart",
+      "ctrl-shift-up": "editor::SelectLargerSyntaxNode",
+      "ctrl-shift-down": "editor::SelectSmallerSyntaxNode",
+      "ctrl-left": "editor::MoveToPreviousSubwordStart",
+      "ctrl-right": "editor::MoveToNextSubwordEnd",
+      "cmd-d": [
+        "editor::SelectNext",
+        {
+          "replace_newest": false
+        }
+      ],
+      "cmd-shift-l": "editor::SelectAllMatches",
+      "ctrl-cmd-d": [
+        "editor::SelectPrevious",
+        {
+          "replace_newest": false
+        }
+      ],
+      "cmd-k cmd-d": [
+        "editor::SelectNext",
+        {
+          "replace_newest": true
+        }
+      ],
+      "cmd-k ctrl-cmd-d": [
+        "editor::SelectPrevious",
+        {
+          "replace_newest": true
+        }
+      ],
+      "cmd-k cmd-i": "editor::Hover",
+      "cmd-/": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ],
+      "cmd-u": "editor::UndoSelection",
+      "cmd-shift-u": "editor::RedoSelection",
+      "f8": "editor::GoToDiagnostic",
+      "shift-f8": "editor::GoToPrevDiagnostic",
+      "f2": "editor::Rename",
+      "f12": "editor::GoToDefinition",
+      "alt-f12": "editor::GoToDefinitionSplit",
+      "cmd-f12": "editor::GoToTypeDefinition",
+      "shift-f12": "editor::GoToImplementation",
+      "alt-cmd-f12": "editor::GoToTypeDefinitionSplit",
+      "alt-shift-f12": "editor::FindAllReferences",
+      "ctrl-m": "editor::MoveToEnclosingBracket",
+      "alt-cmd-[": "editor::Fold",
+      "alt-cmd-]": "editor::UnfoldLines",
+      "ctrl-space": "editor::ShowCompletions",
+      "cmd-.": "editor::ToggleCodeActions",
+      "alt-cmd-r": "editor::RevealInFinder",
+      "ctrl-cmd-c": "editor::DisplayCursorNames"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-shift-m": "outline::Toggle",
+      "ctrl-g": "go_to_line::Toggle"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+      "cmd-0": "pane::ActivateLastItem",
+      "cmd--": "pane::GoBack",
+      "cmd-_": "pane::GoForward",
+      "cmd-shift-t": "pane::ReopenClosedItem",
+      "cmd-shift-f": "project_search::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Change the default action on `menu::Confirm` by setting the parameter
+      // "alt-cmd-o": [
+      //     "projects::OpenRecent",
+      //     {
+      //         "create_new_window": true
+      //     }
+      // ]
+      "alt-cmd-o": "projects::OpenRecent",
+      "alt-cmd-b": "branches::OpenRecent",
+      // "ctrl-~": "workspace::NewTerminal",
+      "cmd-s": "workspace::Save",
+      "cmd-k s": "workspace::SaveWithoutFormat",
+      "cmd-shift-s": "workspace::SaveAs",
+      "cmd-n": "workspace::NewFile",
+      "cmd-shift-n": "workspace::NewWindow",
+      "ctrl-`": "terminal_panel::ToggleFocus",
+      "cmd-1": ["workspace::ActivatePane", 0],
+      "cmd-2": ["workspace::ActivatePane", 1],
+      "cmd-3": ["workspace::ActivatePane", 2],
+      "cmd-4": ["workspace::ActivatePane", 3],
+      "cmd-5": ["workspace::ActivatePane", 4],
+      "cmd-6": ["workspace::ActivatePane", 5],
+      "cmd-7": ["workspace::ActivatePane", 6],
+      "cmd-8": ["workspace::ActivatePane", 7],
+      "cmd-9": ["workspace::ActivatePane", 8],
+      "cmd-b": "workspace::ToggleLeftDock",
+      "cmd-r": "workspace::ToggleRightDock",
+      "cmd-j": "workspace::ToggleBottomDock",
+      "alt-cmd-y": "workspace::CloseAllDocks",
+      "cmd-shift-f": "pane::DeploySearch",
+      "cmd-shift-h": [
+        "pane::DeploySearch",
+        {
+          "replace_enabled": true
+        }
+      ],
+      "cmd-k cmd-s": "zed::OpenKeymap",
+      "cmd-k cmd-t": "theme_selector::Toggle",
+      "cmd-t": "project_symbols::Toggle",
+      "cmd-p": "file_finder::Toggle",
+      "ctrl-tab": "tab_switcher::Toggle",
+      "ctrl-shift-tab": [
+        "tab_switcher::Toggle",
+        {
+          "select_last": true
+        }
+      ],
+      "cmd-shift-p": "command_palette::Toggle",
+      "ctrl-shift-m": "diagnostics::Deploy",
+      "cmd-shift-e": "project_panel::ToggleFocus",
+      "cmd-?": "assistant::ToggleFocus",
+      "cmd-alt-s": "workspace::SaveAll",
+      "cmd-k m": "language_selector::Toggle",
+      "escape": "workspace::Unfollow",
+      "cmd-k cmd-left": ["workspace::ActivatePaneInDirection", "Left"],
+      "cmd-k cmd-right": ["workspace::ActivatePaneInDirection", "Right"],
+      "cmd-k cmd-up": ["workspace::ActivatePaneInDirection", "Up"],
+      "cmd-k cmd-down": ["workspace::ActivatePaneInDirection", "Down"],
+      "cmd-k shift-left": ["workspace::SwapPaneInDirection", "Left"],
+      "cmd-k shift-right": ["workspace::SwapPaneInDirection", "Right"],
+      "cmd-k shift-up": ["workspace::SwapPaneInDirection", "Up"],
+      "cmd-k shift-down": ["workspace::SwapPaneInDirection", "Down"],
+      "alt-t": "task::Rerun",
+      "alt-shift-t": "task::Spawn"
+    }
+  }
+]
