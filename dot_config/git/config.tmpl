@@ -7,8 +7,11 @@
   create-branch = !sh -c 'git show-ref --quiet refs/heads/$1 && git co $1 || (git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1)' -
   cb = !sh -c 'git create-branch $1' -
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git branch -D $1' -
+  delete = "!f() { local branches branch; branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(authordate:relative)%09%(refname:short)') && branch=$(echo \"$branches\" | fzf-tmux -d $((2 + $(wc -l <<<\"$branches\"))) +m) && git branch -D $(echo \"$branch\" | cut -f2 | sed 's/.* //' | sed 's#remotes/[^/]*/##'); }; f"
+  gone = !git branch -vv | grep ': gone\\]' | awk '{print $1}'
   fetch-branch = !sh -c 'git fetch origin && git checkout --track -b $1 origin/$1' -
-  tidy = !git pull --ff-only --all --prune
+  tidy-merged = !git pull --ff-only --all --prune
+  tidy-gone = "!git pull && for i in $(git gone); do git branch -D $i; done"
   sync = "!f() { if [ -z \"$1\" ]; then echo 'Usage: git sync my-branch-to-sync [remote]'; exit 1; else git fetch ${2:-origin} ${1}:${1}; fi }; f"
   pf = push --force-with-lease
   recent = "!f() { local branches branch; branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(authordate:relative)%09%(refname:short)') && branch=$(echo \"$branches\" | fzf-tmux -d $((2 + $(wc -l <<<\"$branches\"))) +m) && git checkout $(echo \"$branch\" | cut -f2 | sed 's/.* //' | sed 's#remotes/[^/]*/##'); }; f"
@@ -23,7 +26,7 @@
   gpgsign = true
 [core]
   autocrlf = input
-  editor = code -n -w
+  editor = zed -n -w
   excludesfile = ~/.gitignore
   hooksPath = {{ .chezmoi.homeDir }}/.config/git/hooks
 [fetch]

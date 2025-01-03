@@ -1,5 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
-[{
+[
+  {
     "key": "ctrl+up",
     "command": "cursorColumnSelectUp",
     "when": "textInputFocus"
@@ -8,7 +9,8 @@
     "key": "ctrl+down",
     "command": "cursorColumnSelectDown",
     "when": "textInputFocus"
-  }, {
+  },
+  {
     "key": "ctrl+left",
     "command": "subwordNavigation.cursorSubwordLeft",
     "when": "editorTextFocus"
@@ -137,4 +139,8 @@
     "key": "cmd+;",
     "command": "findJump.activate"
   },
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.explorer.fileView.focus"
+  }
 ]

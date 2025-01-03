@@ -3,3 +3,4 @@ golangci-lint system
 nodejs system
 postgres 14.2
 ruby 3.1.2
+pnpm 9.15.2

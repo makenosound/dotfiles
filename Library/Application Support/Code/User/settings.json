@@ -15,7 +15,9 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "files.exclude": {
+    "**/.nx": true,
     "coverage": true,
+    "dist": true,
     "node_modules": true,
     "public/assets": true,
     "release-builds": true,
@@ -27,15 +29,11 @@
   "go.toolsManagement.autoUpdate": true,
   "search.searchOnType": false,
   "search.useIgnoreFiles": false,
-  "solargraph.commandPath": "/Users/maxwheeler/.asdf/shims/solargraph",
   "terminal.integrated.fontSize": 16,
   "window.zoomLevel": 0,
-  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Alabaster",
   "workbench.editor.enablePreview": false,
   "workbench.editor.tabSizing": "shrink",
-  "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "ayu",
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 10,
@@ -74,5 +72,52 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "editor.linkedEditing": true,
+  "snyk.advanced.cliPath": "/Users/maxwheeler/Library/Application Support/snyk-ls/snyk-macos",
+  "snyk.yesWelcomeNotification": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "snyk.advanced.organization": "eql",
+  "snyk.trustedFolders": [
+    "/Users/maxwheeler/eql/route66/client",
+    "/Users/maxwheeler/eql",
+    "/Users/maxwheeler/src/hono-static-test-2",
+    "/Users/maxwheeler/src/my-app"
+  ],
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "workbench.activityBar.location": "hidden",
+  "editor.multiCursorLimit": 30000,
+  "jest.monitorLongRun": "120000",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "macos-modern-legit-finder-icon-theme",
+  "workbench.productIconTheme": "macos-modern",
+  "workbench.preferredHighContrastLightColorTheme": "Quiet Light",
+  "workbench.preferredLightColorTheme": "Alabaster",
+  "explorer.excludeGitIgnore": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "snyk.folderConfigs": [
+    {
+      "folderPath": "/Users/maxwheeler/.local/share/chezmoi",
+      "baseBranch": "master",
+      "localBranches": ["master"]
+    }
+  ],
+  "workbench.fontAliasing": "antialiased",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "github.copilot.editor.enableAutoCompletions": false
 }

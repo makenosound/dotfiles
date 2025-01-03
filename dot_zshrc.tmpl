@@ -40,6 +40,8 @@ if ! env | grep -q '^PS1='; then
   PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info) %# '
 fi
 
+export EDITOR="zed -nw"
+
 # Set WORDCHARS to nothing https://zsh.sourceforge.io/Guide/zshguide04.html
 export WORDCHARS=""
 
@@ -70,10 +72,18 @@ ZSH_AUTOSUGGEST_HISTORY_IGNORE="git create-branch *"
 {{- end }}
 
 fcode() {
-  path=$(fd | fzf)
-  if [ -n "$path" ]; then
-    code "$path"
-  fi
+  code $(fd | fzf)
 }
 
+
+# pnpm
+export PNPM_HOME="/Users/maxwheeler/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# https://github.com/atuinsh/atuin
+eval "$(atuin init zsh --disable-up-arrow)"
 {{- end }}
