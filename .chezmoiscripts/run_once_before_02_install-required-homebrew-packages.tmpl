@@ -8,7 +8,6 @@ eval "$(brew shellenv)"
 if ! brew list 1password-cli > /dev/null; then
   echo "===> Installing 1password-cli"
 
-  brew tap homebrew/cask
   brew install 1password-cli
 fi
 {{ end -}}
