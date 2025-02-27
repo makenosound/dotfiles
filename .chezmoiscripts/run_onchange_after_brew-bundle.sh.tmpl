@@ -5,7 +5,7 @@
 ~/.Brewfile: {{ include (joinPath .chezmoi.homeDir ".Brewfile") | sha256sum }}
 
 # Handle different locations for Homebrew between Intel/Mx Macs
-eval "$(/usr/local/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew bundle --no-lock --file ~/.Brewfile
 {{ end -}}
