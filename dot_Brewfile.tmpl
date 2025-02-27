@@ -2,11 +2,9 @@
 
 {{- $taps := list
   "heroku/brew"
-  "homebrew/cask-fonts"
-  "homebrew/cask-versions"
 -}}
 
-{{ if .eql -}}
+{{ if .visibuild -}}
 {{- $taps = concat $taps (list
   "aws/tap")
 -}}
@@ -21,7 +19,6 @@
   "direnv"
   "dockutil"
   "duti"
-  "exa"
   "fd"
   "figlet"
   "ffmpeg"
@@ -52,18 +49,27 @@
   "readline"
   "zlib"
   "curl"
-  "ossp-uuid")
+  "ossp-uuid"
+  "icu4c"
+  "pkg-config")
 -}}
 
-{{ if .eql -}}
+{{ if .visibuild -}}
 {{- $brews = concat $brews (list
   "awscli"
   "aws/tap/aws-sam-cli"
-  "gatsby-cli"
-  "go"
-  "golangci-lint"
+  "autoconf"
+  "cmake"
+  "ffmpeg"
+  "gmp"
+  "icu4c"
+  "imagemagick"
+  "libyaml"
   "make"
-  "ykman")
+  "openssl@3"
+  "pkg-config"
+  "poppler"
+  "readline")
 -}}
 {{ end -}}
 
@@ -72,15 +78,9 @@
 {{- $casks := list
   "1password"
   "1password-cli"
-  "docker"
-  "dropbox"
   "fantastical"
   "figma"
   "firefox"
-  "font-ia-writer-duo"
-  "font-ia-writer-duospace"
-  "font-ia-writer-mono"
-  "font-ia-writer-quattro"
   "font-jetbrains-mono"
   "fork"
   "hammerspoon"
@@ -105,12 +105,11 @@
   "google-chrome")
 -}}
 {{ end -}}
-{{ if .eql -}}
+{{ if .visibuild -}}
 {{- $casks = concat $casks (list
-  "leapp"
   "linear-linear"
-  "notion"
-  "session-manager-plugin")
+  "medis"
+  "notion")
 -}}
 {{ end -}}
 
@@ -126,12 +125,6 @@
 -}}
 # Installation fails semi-regularly
 # "1Blocker -> 1365531024"
-
-{{ if .eql -}}
-{{- $apps = concat $apps (list
-  "GoLinks -> 1478821913")
--}}
-{{ end -}}
 
 {{ range ($taps | sortAlpha | uniq) -}}
 tap "{{ . }}"

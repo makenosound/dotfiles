@@ -10,3 +10,8 @@ tmp/**/*
 .byebug_history
 .pryrc
 .overmind*.sock
+
+{{ if .visibuild -}}
+Procfile.support
+.tool-versions
+{{ end -}}

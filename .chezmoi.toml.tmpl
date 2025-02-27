@@ -1,6 +1,6 @@
 {{/* boolean feature tags */}}
 {{- $personal := false -}}{{/* true if this is my personal machine */}}
-{{- $eql := false -}}{{/* true if this is my work machine */}}
+{{- $visibuild := false -}}{{/* true if this is my work machine */}}
 {{- "" -}}
 
 {{- $osID := .chezmoi.os -}}
@@ -15,19 +15,19 @@
 {{-   if eq $computerName "Max’s MacBook Pro" -}}
 {{-     $hostname = "maxs-mba" -}}
 {{-     $hostname = $computerName -}}
-{{-   else if eq $computerName "max-eql" -}}
-{{-     $hostname = "eql-mbp" -}}
+{{-   else if eq $computerName "max-visibuild" -}}
+{{-     $hostname = "visibuild-mbp" -}}
 {{-   end -}}
 {{- end -}}
 
 {{- if eq $hostname "maxs-mba" -}}
 {{-   $personal = true -}}
-{{- else if eq $hostname "eql-mbp" -}}
-{{-   $eql = true -}}
+{{- else if eq $hostname "visibuild-mbp" -}}
+{{-   $visibuild = true -}}
 {{- end -}}
 
 [data]
   hostname = {{ $hostname | quote }}
   personal = {{ $personal }}
-  eql = {{ $eql }}
+  visibuild = {{ $visibuild }}
   osid = {{ $osID | quote }}
