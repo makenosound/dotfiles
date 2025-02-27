@@ -46,7 +46,7 @@
 [pull]
   rebase = true
 
-{{ if .eql -}}
-[includeIf "gitdir/i:~/eql/"]
-  path = {{ .chezmoi.homeDir }}/.config/git/eql.gitconfig
+{{ if .visibuild -}}
+[includeIf "gitdir/i:~/visibuild/"]
+  path = {{ .chezmoi.homeDir }}/.config/git/visibuild.gitconfig
 {{ end -}}
