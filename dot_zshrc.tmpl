@@ -1,13 +1,11 @@
 {{ if eq .chezmoi.os "darwin" -}}
 # Use Homebrew
-{{ if .eql -}}
-  export PATH="/opt/homebrew/bin:$PATH"
-{{ end -}}
-{{ if .personal -}}
-  export PATH="/usr/local/bin:$PATH"
-{{ end -}}
+export PATH="/opt/homebrew/bin:$PATH"
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 eval "$(brew shellenv)"
+
+# Required for postgres to build, see https://github.com/smashedtoatoms/asdf-postgres/issues/52
+set --export HOMEBREW_PREFIX "/opt/homebrew"
 
 # Configure Zim modules
 zstyle ':zim:termtitle' format '%2~'
@@ -62,16 +60,15 @@ setopt HIST_IGNORE_SPACE
 # Avoid suggestions for previous commands
 ZSH_AUTOSUGGEST_HISTORY_IGNORE="git create-branch *"
 
-{{ if .eql -}}
-  # Aliases for pnpm deps
-  alias cdk="pnpm cdk"
-  alias nx="pnpm nx"
-{{- end }}
+# asdf config
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# Aliases for pnpm deps
+alias be="bundle exec"
 
 fcode() {
   code $(fd | fzf)
 }
-
 
 # pnpm
 export PNPM_HOME="/Users/maxwheeler/Library/pnpm"
