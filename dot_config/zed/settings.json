@@ -7,30 +7,70 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "show_inline_completions": false,
+  "icon_theme": "Catppuccin Latte",
   "languages": {
     "Plain Text": {
-      "show_inline_completions": false
+      "show_edit_predictions": false
+    },
+    "Markdown": {
+      "soft_wrap": "preferred_line_length",
+      "preferred_line_length": 100
+    },
+    "Ruby": {
+      "tab_size": 2,
+      "wrap_guides": [100],
+      // Use ruby-lsp, not the Ruby extension's default of solargraph.
+      "language_servers": [
+        "ruby-lsp",
+        "sorbet",
+        "!solargraph",
+        "rubocop",
+        "tailwindcss-language-server"
+      ]
+    },
+    "ERB": {
+      "formatter": {
+        "external": {
+          "command": "erb-format",
+          "arguments": ["--stdin", "--print-width", "80"]
+        }
+      }
     }
   },
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
     },
     "version": "2"
   },
-  "theme": "Github Light",
-  "ui_font_size": 16,
+
+  "theme": "Oxocarbon Light (Variation II)",
+  "ui_font_size": 17,
   "buffer_font_size": 16,
   "project_panel": {
     "folder_icons": true,
-    "file_icons": false,
+    "file_icons": true,
     "indent_size": 10, // Slightly less than default, for more compact nesting.
     "auto_fold_dirs": true,
     "indent_guides": {
       "show": "never"
     }
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    ".yarn/releases"
+  ],
+  "file_types": {
+    "ERB": ["mjml"]
   },
 
   "indent_guides": {
@@ -47,8 +87,12 @@
   "tab_size": 2,
 
   // Disable features
+  "show_edit_predictions": false,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "chat_panel": {
-    "button": false,
+    "button": "never",
     "dock": "left"
   },
   "telemetry": {
